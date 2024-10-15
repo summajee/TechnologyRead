@@ -1,4 +1,39 @@
-###  1. *How does EDCHE works in TLS 1.3 to provide forward secrecy? Explain the Process*
+### 1. *Say you have server, which has it's own certificate. The client application and server needs to agree on a shared secret for the session. TLS 1.2/SSL does this, explain the process*
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TLS 1.2 typically uses RSA key pair, that is assigned to server to arrive at a shared session Keys. Keep in mind the public key is public and anybody can use and see that. Private key is kept to server.
+
+```
+    Client                                                                       Server
+
+     C_Hello                 ---> C_rnd, Cipher_suites ---------------->          Stores C_rnd
+     Stores S_rnd            <------  S_rnd, Choosen Cipher, Pub_Key --           Server_hello
+Create Pk = Pre_master_key  ------Enc(Pub_key(Pk)  ------------------->           Only Server can decrypt
+                                                                                  Dec(Priv_key(Pk))
+Create Master Key                                                                 Create Master Key
+Mk=PRF(Pk,C-rnd, S_rnd)                                                           Mk=PRF(Pk,C-rnd, S_rnd)
+
+ At this point both client and server generates a shared KeyBlock and actual session Key are generate from there.
+
+Key Block = PRF(Master Secret, "key expansion", Server Random + Client Random)
+     
+```
+From the KeyBlock following are generated.
+
+1. ClientMAC : HMAC key for msg auth, typically 32Bytes
+2. ServerMAC : 32 byte HMAC
+3. Client AES Key : 16B
+4. Server AES Key : 16B
+5. Client IV : 16B
+6. Server IV : 16B
+
+Typically the formular for KeyBlock size is 
+```
+Key block size = 2 × (MAC key size + Encryption key size + IV size)
+```
+
+
+
+###  2. *How does EDCHE works in TLS 1.3 to provide forward secrecy? Explain the Process*
 ------------------------------------------------------------------------------------------------
 
 **Elliptic Curve Diffie-Hellman Ephemeral (ECDHE)** is a key exchange protocol used to securely establish a shared secret between two parties over an insecure channel. ECDHE is widely used in TLS (Transport Layer Security) to provide **Perfect Forward Secrecy (PFS)**, ensuring that even if the server's private key is compromised, past communications remain secure.
@@ -177,8 +212,8 @@ ECDHE is a robust and efficient key exchange protocol that enhances the security
 Client                                                                  Server
 
 d_c (private key)
-Q_c = d_c × G (public key)                                 d_s (private key)
-                                                                            Q_s = d_s × G (public key)
+Q_c = d_c × G (public key)                                             d_s (private key)
+                                                                       Q_s = d_s × G (public key)
 
 -------- Q_c --------->                                            (Receives Q_c)
 
