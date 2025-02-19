@@ -1,3 +1,11 @@
+<!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
+
+- [Learning Material ](#learning-material)
+   * [Free Course Material Online:](#free-course-material-online)
+   * [Course Work:](#course-work)
+
+<!-- TOC end -->
+
 # Learning Material 
 
 ## Free Course Material Online:
