@@ -3,6 +3,8 @@
 - [Learning Material ](#learning-material)
    * [Free Course Material Online:](#free-course-material-online)
    * [Course Work:](#course-work)
+- [References:](#reference-material)
+     
 
 <!-- TOC end -->
 
@@ -23,3 +25,7 @@ Both Udemy and Coursera offers a comprehesive set of courses along with hands on
 
 1. A 5 course series on [deep learning](https://www.coursera.org/specializations/deep-learning) by Andrew Ng
 2. Google offers free [AI and ML](https://cloud.google.com/learn/training/machinelearning-ai) courses for all levels
+
+# Reference Material
+
+1. How [deepseek-R1](https://newsletter.languagemodels.co/p/the-illustrated-deepseek-r1) is trained. Very informative and succint
