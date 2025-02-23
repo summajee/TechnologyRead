@@ -29,3 +29,11 @@ Both Udemy and Coursera offers a comprehesive set of courses along with hands on
 # Reference Material
 
 1. How [deepseek-R1](https://newsletter.languagemodels.co/p/the-illustrated-deepseek-r1) is trained. Very informative and succint
+2. Andrej Karpathy’s 3.5 hour video is one of the most comprehensive material that describes LLM in detail. From pre-training, SFT, RL etc.
+3. 𝗪𝗮𝘁𝗰𝗵 𝘁𝗵𝗲 [𝗳𝘂𝗹𝗹 𝘃𝗶𝗱𝗲𝗼](https://youtu.be/7xTGNNLPyMI?si=iSy9vkBEA_j739AS)
+U𝘀𝗲 𝘁𝗵𝗲𝘀𝗲 𝘁𝗼𝗼𝗹𝘀 to help visualize AI’s full processing logic, from tokenization to decision-making, so you can spot where reasoning works and where it fails: 
+
+📌 [Tokenization](https://tiktokenizer.vercel.app/)
+📌 [Visualize Datasets](atlas.nomic.ai) 
+📌 See [LLM Architecture Flows](https://bbycroft.net/llm)
+📌 Bonus: [Understand Transformer Steps](https://lnkd.in/g7P-C4HJ)
