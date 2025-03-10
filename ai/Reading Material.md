@@ -34,6 +34,16 @@ Both Udemy and Coursera offers a comprehesive set of courses along with hands on
 U𝘀𝗲 𝘁𝗵𝗲𝘀𝗲 𝘁𝗼𝗼𝗹𝘀 to help visualize AI’s full processing logic, from tokenization to decision-making, so you can spot where reasoning works and where it fails: 
 
 📌 [Tokenization](https://tiktokenizer.vercel.app/)
+
 📌 [Visualize Datasets](atlas.nomic.ai) 
+
 📌 See [LLM Architecture Flows](https://bbycroft.net/llm)
+
 📌 Bonus: [Understand Transformer Steps](https://lnkd.in/g7P-C4HJ)
+
+# Notes:
+1. How does large model training is accelerated? Roughly there are few techniques. This is short nice [blog](https://alessiodevoto.github.io/parallelism/)
+   - **Data Parallelism**, Large training data and model fits in a single GPU.
+   - **Model Parallelism**, Here Models are too big to fit into a single GPU. Dividing across GPU leads to very poor GPU utilization.
+   - **Pipeline Parallelism**, It solves the GPU utilization with complex scheduling but increases overhead.
+   - **ZeRO**, Need better unerstanding
