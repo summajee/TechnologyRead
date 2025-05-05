@@ -4,7 +4,7 @@ This is a collection (mostly links and some tidbits) of material on PII/PHI data
 ### Models, Entity Recognizers ###
 
 1. GLiNER Genaralized Model  [GitHub repo:](https://github.com/urchade/GLiNER). The paper can be found [here](https://arxiv.org/abs/2311.08526). Huggging Face model card is [here](https://huggingface.co/urchade/gliner_multi_pii-v1)
-2. 
+2. [Flair](https://github.com/flairNLP/flair), a simple lo resource library provides hi accuracy pn PERSON, NAME
 
 ### DataSets
 
